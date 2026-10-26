@@ -9,12 +9,15 @@ export const DRINK_CATEGORIES = [
   'Cóctel',
 ]
 
-export const SKEWER_TYPES = [
-  'Res',
-  'Pollo',
-  'Cerdo',
-  'Mixto',
-  'Vegetariano',
+export const COMPONENT_UNITS = [
+  'palo(s)',
+  'porción(es)',
+  'unidad(es)',
+  'plato(s)',
+  'vaso(s)',
+  'botella(s)',
+  'gramo(s)',
+  'kilogramo(s)',
 ]
 
 export const seedUsers = [
@@ -95,50 +98,40 @@ export const seedDrinks = [
   },
 ]
 
-export const seedSkewers = [
+export const seedComponents = [
   {
-    id: 'skw-1',
-    name: 'Anticucho de corazón',
-    type: 'Res',
-    price: 12,
+    id: 'cmp-1',
+    name: 'Anticucho de Corazón',
+    unit: 'palo(s)',
     stock: 40,
-    prepTime: 8,
     available: true,
   },
   {
-    id: 'skw-2',
-    name: 'Anticucho de pollo',
-    type: 'Pollo',
-    price: 10,
-    stock: 30,
-    prepTime: 10,
+    id: 'cmp-2',
+    name: 'Arroz',
+    unit: 'porción(es)',
+    stock: 60,
     available: true,
   },
   {
-    id: 'skw-3',
-    name: 'Anticucho mixto',
-    type: 'Mixto',
-    price: 14,
-    stock: 22,
-    prepTime: 12,
+    id: 'cmp-3',
+    name: 'Papa dorada',
+    unit: 'porción(es)',
+    stock: 45,
     available: true,
   },
   {
-    id: 'skw-4',
-    name: 'Brocheta de chorizo',
-    type: 'Cerdo',
-    price: 11,
-    stock: 9,
-    prepTime: 9,
+    id: 'cmp-4',
+    name: 'Chorizo parrillero',
+    unit: 'unidad(es)',
+    stock: 8,
     available: true,
   },
   {
-    id: 'skw-5',
-    name: 'Brocheta de verduras',
-    type: 'Vegetariano',
-    price: 9,
+    id: 'cmp-5',
+    name: 'Ensalada fresca',
+    unit: 'porción(es)',
     stock: 0,
-    prepTime: 7,
     available: false,
   },
 ]

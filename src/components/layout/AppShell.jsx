@@ -22,7 +22,7 @@ export function AppShell({ children }) {
         <div className="absolute -bottom-24 left-1/3 h-72 w-72 rounded-full bg-cream-200/70 blur-3xl" />
       </div>
 
-      <main className="relative z-10 mx-auto w-full max-w-6xl px-4 pt-6 pb-14 pl-20 sm:pr-6 sm:pl-28 lg:pl-32">
+      <main className="relative z-10 mx-auto w-full max-w-6xl px-4 pt-6 pb-32 sm:px-6 xl:px-12 xl:pb-14">
         <header className="mb-8 flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-3">
             <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-ink-900 text-ember-300 shadow-soft">

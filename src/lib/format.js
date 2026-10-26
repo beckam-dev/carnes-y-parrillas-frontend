@@ -23,3 +23,7 @@ export function initials(name = '') {
     .join('')
     .toUpperCase()
 }
+
+export function formatComponentLabel({ unit, name }) {
+  return `${unit} de ${name}`
+}

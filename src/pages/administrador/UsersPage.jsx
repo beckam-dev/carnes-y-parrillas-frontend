@@ -3,18 +3,18 @@ import { Plus, ShieldCheck, UserCheck, Users } from 'lucide-react'
 import { ROLES } from '../../data/seed'
 import { cn } from '../../lib/cn'
 import { formatDate, initials } from '../../lib/format'
-import { UserForm } from '../forms/UserForm'
-import { Badge } from '../ui/Badge'
-import { Button } from '../ui/Button'
-import { ConfirmDialog } from '../ui/ConfirmDialog'
-import { DataTable } from '../ui/DataTable'
-import { EmptyState } from '../ui/EmptyState'
-import { FilterChips } from '../ui/FilterChips'
-import { Modal } from '../ui/Modal'
-import { PageHeader } from '../ui/PageHeader'
-import { RowActions } from '../ui/RowActions'
-import { SearchInput } from '../ui/SearchInput'
-import { StatCard } from '../ui/StatCard'
+import { UserForm } from '../../components/forms/UserForm'
+import { Badge } from '../../components/ui/Badge'
+import { Button } from '../../components/ui/Button'
+import { ConfirmDialog } from '../../components/ui/ConfirmDialog'
+import { DataTable } from '../../components/ui/DataTable'
+import { EmptyState } from '../../components/ui/EmptyState'
+import { FilterChips } from '../../components/ui/FilterChips'
+import { Modal } from '../../components/ui/Modal'
+import { PageHeader } from '../../components/ui/PageHeader'
+import { RowActions } from '../../components/ui/RowActions'
+import { SearchInput } from '../../components/ui/SearchInput'
+import { StatCard } from '../../components/ui/StatCard'
 
 const roleTones = {
   Administrador: 'ember',
@@ -38,7 +38,7 @@ const filterOptions = [
   ...ROLES.map((role) => ({ value: role, label: role })),
 ]
 
-export function UsersView({ collection }) {
+export function UsersPage({ collection }) {
   const { items, add, update, remove } = collection
   const [query, setQuery] = useState('')
   const [roleFilter, setRoleFilter] = useState('all')

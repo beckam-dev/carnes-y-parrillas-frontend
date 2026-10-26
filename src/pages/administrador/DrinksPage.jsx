@@ -3,19 +3,19 @@ import { Boxes, CircleCheck, CupSoda, Plus } from 'lucide-react'
 import { DRINK_CATEGORIES } from '../../data/seed'
 import { cn } from '../../lib/cn'
 import { formatCurrency } from '../../lib/format'
-import { DrinkForm } from '../forms/DrinkForm'
-import { Badge } from '../ui/Badge'
-import { Button } from '../ui/Button'
-import { ConfirmDialog } from '../ui/ConfirmDialog'
-import { DataTable } from '../ui/DataTable'
-import { EmptyState } from '../ui/EmptyState'
-import { FilterChips } from '../ui/FilterChips'
-import { Modal } from '../ui/Modal'
-import { PageHeader } from '../ui/PageHeader'
-import { RowActions } from '../ui/RowActions'
-import { SearchInput } from '../ui/SearchInput'
-import { StatCard } from '../ui/StatCard'
-import { Toggle } from '../ui/Toggle'
+import { DrinkForm } from '../../components/forms/DrinkForm'
+import { Badge } from '../../components/ui/Badge'
+import { Button } from '../../components/ui/Button'
+import { ConfirmDialog } from '../../components/ui/ConfirmDialog'
+import { DataTable } from '../../components/ui/DataTable'
+import { EmptyState } from '../../components/ui/EmptyState'
+import { FilterChips } from '../../components/ui/FilterChips'
+import { Modal } from '../../components/ui/Modal'
+import { PageHeader } from '../../components/ui/PageHeader'
+import { RowActions } from '../../components/ui/RowActions'
+import { SearchInput } from '../../components/ui/SearchInput'
+import { StatCard } from '../../components/ui/StatCard'
+import { Toggle } from '../../components/ui/Toggle'
 
 const categoryStyles = {
   Gaseosa: 'bg-ember-100 text-ember-600',
@@ -33,7 +33,7 @@ const filterOptions = [
   })),
 ]
 
-export function DrinksView({ collection }) {
+export function DrinksPage({ collection }) {
   const { items, add, update, remove } = collection
   const [query, setQuery] = useState('')
   const [categoryFilter, setCategoryFilter] = useState('all')

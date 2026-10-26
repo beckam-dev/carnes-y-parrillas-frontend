@@ -7,19 +7,33 @@ entidades de negocio.
 ## Stack
 
 - React 19 + Vite 8
+- React Router 7
 - Tailwind CSS 4 (tema configurado en `src/index.css` con `@theme`)
 - [Lucide React](https://lucide.dev/) para la iconografía
 - Fuentes locales con Fontsource: **Outfit** (texto) y **Fraunces** (títulos)
 
 ## Funcionalidad actual
 
-- Dock flotante izquierdo con navegación animada entre vistas.
+- **Dock flotante**: a la izquierda en escritorio y en la parte inferior en
+  tablets y móviles.
 - **Usuarios**: roles Administrador, Mesero y Cocinero.
 - **Bebidas**: categoría, precio, stock y disponibilidad.
-- **Anticuchos**: tipo, precio, stock, tiempo de preparación y disponibilidad.
+- **Componentes**: unidades mínimas del negocio, definidas por nombre y unidad
+  (por ejemplo `palo(s) de Anticucho de Corazón` o `porción(es) de Arroz`),
+  con stock y disponibilidad.
 - Crear, editar y eliminar registros con modales y confirmaciones.
-- Búsqueda y filtros por vista.
+- Búsqueda, filtros y tarjetas de resumen por vista.
 - Datos de ejemplo en `src/data/seed.js` (en memoria: se reinician al recargar).
+
+## Rutas
+
+| Ruta                           | Descripción                          |
+| ------------------------------ | ------------------------------------ |
+| `/`                            | Redirige a `/administrador`          |
+| `/administrador`               | Redirige a `/administrador/usuarios` |
+| `/administrador/usuarios`      | Gestión de usuarios                  |
+| `/administrador/bebidas`       | Gestión de bebidas                   |
+| `/administrador/componentes`   | Gestión de componentes               |
 
 ## Paleta de colores
 
@@ -45,15 +59,16 @@ Todos los colores están declarados como tokens en `src/index.css`:
 ```
 src/
 ├── components/
-│   ├── Dock.jsx          # Dock flotante de navegación
+│   ├── Dock.jsx          # Dock responsive de navegación
 │   ├── forms/            # Formularios de cada entidad
 │   ├── layout/           # AppShell (fondo, topbar y layout)
-│   ├── ui/               # Componentes reutilizables (Button, Modal, Tabla…)
-│   └── views/            # Vistas de usuarios, bebidas y anticuchos
+│   └── ui/               # Componentes reutilizables (Button, Modal, Tabla…)
 ├── data/seed.js          # Datos de ejemplo y catálogos
 ├── hooks/useCollection.js
 ├── lib/                  # Utilidades de formato, estilos y clases
-├── App.jsx
+├── pages/
+│   └── administrador/    # AdminPage y sus páginas internas
+├── App.jsx               # Router principal
 ├── index.css             # Tema, colores, animaciones y estilos base
 └── main.jsx
 ```
