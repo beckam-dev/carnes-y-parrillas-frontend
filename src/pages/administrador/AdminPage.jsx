@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
-import { Bacon, Beef, Boxes, CupSoda, Users } from 'lucide-react'
+import { Beef, CupSoda, Users } from 'lucide-react'
 import { Dock } from '../../components/Dock'
 import { AppShell } from '../../components/layout/AppShell'
 import { seedComponents, seedDrinks, seedUsers } from '../../data/seed'
